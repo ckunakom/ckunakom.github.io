@@ -22,12 +22,8 @@
               <h2 class="pb-3 pt-3 text-primary"><strong>ETL: All Songs in Smule🎤</strong></h2>
               <div class="row">
                 <div class="col">
-<!--          
-                  <p class='text-secondary'><strong>Authors: Dan Evans, Rose Inglis, Cynthia Kunakom</strong></p>
-                  <p>Our team explored whether there is any correlation between the number of crime incidence and the weather temperature in Silver Spring, Maryland during 2017-2019. We believed that the number of crime incidence may be affected by the weather temperature.</p>
-                  <p><u>Background Inspiration</u><br> In 2014, a <a href="https://www.latimes.com/nation/la-xpm-2014-jan-07-la-na-nn-kentucky-inmate-cold-20140107-story.html" target="_blank">Kentucky inmate</a> made an escape from the prison and turned himself back in because the tempeature outside was too cold. We believe there may be a correlation between the temperature and the incidence of crime.</p>
-                  <p><u>Questions to Answer</u><br> Is there any correlation between the incidence of crime and the weather temperature?</p> -->
-
+                  
+                  <!-- NAV BAR CONTENT-->
                   <ul class="nav nav-tabs">
                     <li class="nav-item">
                       <a class="nav-link active" data-toggle="tab" href="#home">Intro</a>
@@ -45,7 +41,7 @@
                         <a class="nav-link" data-toggle="tab" href="#analysis">Analysis</a>
                     </li>
                   </ul>
-                  <!-- CONTENT STUFF -->
+
                   <!-- Home -->
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active show" id="home">
@@ -56,8 +52,7 @@
                         <p>I have developed quite a good relationship with some of the people I sing with in the app. After singing togehter for a few years
                             I couldn't help thinking, <i class='text-danger'>'How many songs have we sung together in total?'</i> Unfortunately, Smule -just like any other social media- does not
                             really give you a year-end report of your activity like how you would get your credit card usage statement 😂</p>
-                        <!-- <p>Half way through the coding boot camp, I felt equipped (& brave) enough to try and feed my few-years-worth of curiosity,
-                            and that is how this project was born.</p> -->
+                        
                         <p>Yes, I am very obssessed with this! This started of with the goal of figuring out the total number of songs, but once things got kick into motion there was no stopping it🤩
                              Besides, this is MY data, and what could be better than using my own data to demonstrate my coding skills AND my interest!?</p>
                       <p> <h5 class='text-secondary'><strong>Goal</strong></h5>
@@ -93,11 +88,11 @@
                         <li><i>Any API request? Nope... Okay, fine.</i></li> 
                         <li><i>No year-end report in any format. So, stop wasting time lamenting. Moving on..</i></li>
                         <li><i>Web scraping with BeautifulSoup (python): ...code can't be soupify...</i></li>
-                        <li>GOOGLE!</li>
+                        <li>MORE GOOGLE!</li>
                       </ul>
                       <p>From googling around, I finally got my hands on the URL where I can get the data I need in a json format. Bless those beautiful souls for sharing the URL on <a href="https://stackoverflow.com/questions/50074596/list-of-followers-and-recordings-of-smule" target="_blank"> stackoverflow</a> and
                         <a href="https://sing.salon/forums/topic/614-introducing-sing-insights-beta/" target="_blank"> Sing Salon</a>.</p>
-                      <strong class='text-muted'>STARTER URL OBTAINED</strong>✨
+                      <strong class='text-muted'>STARTER URL ACQUIRED</strong>✨
                       <p class='text-success'>https://www.smule.com/s/profile/performance/&lt;username&gt;/sing?offset=&lt;#&gt;</p>  
                       <p><h5 class='text-secondary'><strong>Parsing-out JSON Object</strong></h5> 
                       <p>Let the cherry-picking begins!</p>
@@ -109,7 +104,7 @@
                         </div>
                         <div class="col">
                           <div>
-                            For my own purpose, I am only interested in the following keys:
+                            For my own purpose, I am only interested in the following filed:
                             <ul>
                               <li>"title"</li> 
                               <li>"artist" (looks like the song uploader didn't specify artist for this one)</li>
@@ -130,8 +125,9 @@
                     </div>
                     <div class="tab-pane fade" id="transform">
                       <p><h5 class='text-secondary'><strong>Cleaning Up</strong></h5> 
-                      <p>Most of the data returned is actually pretty clean, but I want the data to get spit out in certain way. I tweaked the output of the two fields: date ("created_at" key) and web URL ("web_url" key). 
-                      <p>Instead of having the date and timestamp (stalkable metric 😱), I only want a return of of the date:<br>
+                      <p>Most of the data returned is actually pretty clean, but I want the data to get spit out in a certain way. 
+                        I tweaked the output of the two fields: date ("created_at") and web URL ("web_url"). 
+                      <p>Instead of having the date and timestamp (stalkable metric right there 😱), I only want a return of just the date:<br>
                         <ul>
                           <li>"2020-08-16T20:54:36-07:00" → "2020-08-16"</li>
                         </ul>
@@ -142,22 +138,28 @@
                         </ul>
                       </p>
                       <p><h5 class='text-secondary'><strong>Extra Clean-up</strong></h5>
-                      <p>I did an extra clean-up step to replace the real date with fake date and to also replace the actual username with just '-username' 🙄</p>
+                      <p>I did an extra clean-up step to replace the real date with a fake one and to also replace the actual username with just '-username-' 🙄</p>
                       <p><h5 class='text-secondary'><strong>Creating Dataframe🐼</strong></h5> 
                       <p>Once all the data is in the format I want, it's time for pandas to shine!</p>
-                      <strong class='text-muted'>NICE TABLE OBTAINED</strong>✨
                       <div class="text-center pb-2">
                         <a><img src="asset/transform.PNG" alt="transform_table" width="85%"></a>
                       </div>
-
+                      <p><h5 class='text-secondary'><strong>Write to CSV</strong></h5> 
                       <p>I ran the code to import the dataframe to csv as opposed to using SQLAlchemy to create engine and connection to postgreSQL 
-                        -Sorry if this got anti-climatic👀
+                        -Sorry if this got anti-climatic👀 Anyhow!
+                        <strong class='text-muted'>NICE TABLE ACQUIRED</strong>✨
                       </p>
                     
                     </div>
                     <div class="tab-pane fade" id="load">
                       <!-- SQL schema -->
-                      <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+                      <p><h5 class='text-secondary'><strong>Setting up Database</strong></h5> 
+                      <p>Again, I use postgreSQL as my database to run my SQL query. I created a database within pgAdmin before creating a table with the following code before I imported my csv:</p>
+                      <a><img src="asset/load.PNG" alt="load_table" width="85%"></a>
+                      <p>Once the data has been dumped, it's time to go to town with it! ✊</p>
+                      <p><h5 class='text-secondary'><strong>Query</strong></h5>
+                      <p><i>Oh my gosh!</i> I am finally getting my long-awaited results🤩 Here are some of the queries I ran:</p>
+                      <a><img src="asset/query.PNG" alt="query" width="50%"></a>
                     </div>
                     <div class="tab-pane fade" id="analysis">
                     <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
