@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crime & Weather - Data/Methodology</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="..\lumen.css">
+</head>
+
+
+
+
+<body>
+<!-- CONTENT STUFF -->
+<div class="container">
+    <div class="row mb-2 mt-5">
+        <div class="col-md-10">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h2 class="pb-3 pt-3 border-bottom text-primary"><strong>Data & Methodology</strong></h2>
+              <div class="row">
+                <div class="col">            
+                  <p><u>Data & Limitation</u><br> We obtained the raw data in the csv format of crime statistic in Maryland from <a href="https://data.montgomerycountymd.gov/Public-Safety/Crime/icn6-v9z3" target="_blank">dataMontgomery</a>, and we transcibed the climate data from <a href="https://www.bestplaces.net/climate/city/maryland/silver_spring" target="_blank">BestPlaces</a> into a csv file.
+                  <p>We were unable to obtain a real-time weather data through OpenWeatherMap API request as the historical data that is beyond 5-day-period would require a subscription. Instead, we used the climate data to get the average temperature of each month. As a result, we only focused in analyzing the crime data in only one city. We selected the city with the highest number of crimes, Silver Spring.</p> 
+                  <p><u>Data Clean-Up</u><br> To get a table of clean data for our analysis, we completed the following steps:
+                  <ul>
+                    <li>imported the csv data;</li>
+                    <li>extracted the data columns of interest;</li> 
+                    <li>removed entries not considered as crime data;</li>
+                    <li>reformatted the date & time columns to be in date/time format;</li> 
+                    <li>extracted only data from 'Silver Spring';</li>
+                    <li>located the first and last date of the data;</li>
+                    <li>removed data that does not have a complete year</li>
+                  </ul>                
+                  <button type="button" class="btn btn-outline-info"><a href="crime_weather_data.html" target="_blank">Preview of the Clean Data</a></button>
+                  </p>
+                  <p>After looking at our cleaned data, we decided to focus our anaylsis from 2017-2019 on the following crime categories: 
+                    <ul>
+                      <li>Crime Against Property</li>
+                      <li>Crime Against Person</li>
+                      <li>Crime Against Society</li>
+                    </ul>
+                  </p>
+                  <p><u>Data Analysis</u><br>For each of the crime cateogorie, we visualized the number of crimes for each month in a year. We took the average of the number of crime in eaach month before we brought in the climate data to performe linear regression.
+                    Then, we binned our data into 4 different temperature categories,and  performed ANOVA hypothesis tests to determine whether there is any statistical significance in the number of crime for different temperature category.</p>
+                  <button type="button" class="btn btn-outline-info"><a href="https://github.com/siekmeierpaul/Project1-Team6/blob/master/Weather%20%26%20Crime%20in%20Silver%20Spring_Maryland.ipynb" target="_blank">All codes for this project</button>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+    
+
+      
+        <div class="col-md-2">
+            <div class="list-group">
+                <a href="crime_weather_intro.html" class="list-group-item list-group-item-action">Introduction</a>
+                <a href="#" class="list-group-item list-group-item-action active">Data & Methodology</a>
+                <a href="crime_weather_results-analysis.html" class="list-group-item list-group-item-action">Results & Analysis</a>
+            </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.miJujubes carrot cake chocolate cake cupcake toffee cupcake pudding fruitcake chupa chups. Toffee lollipop cupcake. Danish caramels macaroon lemon drops candy canes.n.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+    
+    </html>
+           

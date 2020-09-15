@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crime & Weather - Results/Analysis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="..\lumen.css">
+</head>
+
+
+
+<body>
+<!-- CONTENT STUFF -->
+<div class="container">
+    <div class="row mb-2 mt-5">
+        <div class="col-md-10">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h2 class="pb-3 pt-3 border-bottom text-primary"><strong>Results & Analysis</strong></h2>
+              
+              <div class="row">
+                <div class="col">
+                  <!-- <div class="alert alert-info">
+                    <button type="button" class="close"></button>
+                    <h6 class="text-muted">Be sure to click on the image to see it in full-size!</h6>
+                  </div> -->
+                  <h6 class="text-muted text-right">Be sure to click on the image to see it in full-size!</h6>
+
+                  <!-- Overall -->
+                  <h3 class="text-secondary">Crime & Temperature?</h3>
+                  <div class="row">
+                    <div class="col">
+                    <p>Before we begin our individual analysis of each crime category, we performed a hypothesis test to determine
+                      whether temperature affects crime level in the city of Silver Spring, Maryland.</p>
+                    <h6><strong>Hypothesis Testing</strong></h6>
+                    <p>H<sub>0</sub>: Temperature does not affect the number of crimes in Silver Spring, Maryland.</p>
+                    <p>ANOVA <i>p</i>-value: 0.07526130880382127</p>
+                    <p>With the p-value of > 0.05, we cannot reject our null hypothesis.</p>
+                    <h6 class="text-danger">Onward with the individual analysis to get some insight!</h6>
+                    
+                    </div>
+                    <div class="col">
+                    <a href="asset/overll_crime_temp.png" target="_blank"><img src="asset/overll_crime_temp.png" alt="overall_crime" width="450px"></a>
+                    </div>
+                  </div>
+
+                  <!-- Person -->
+                  <h3 class="text-secondary">Crime Agaisnt Person</h3>
+                    <div class="row">
+                    <div class="col">
+                      <a href="asset/person_crime.png" target="_blank"><img src="asset/person_crime.png" alt="person_crime" width="450px"></a>
+                      <a href="asset/person_crime_reg.png" target="_blank"><img src="asset/person_crime_reg.png" alt="person_crime_regression" width="450px"></a>
+                    </div>
+                    <div class="col">
+                      <table class="table table-hover table-sm text-center">
+                        <thead>
+                          <tr class="table-light">
+                            <th>Month</th>
+                            <th>Avg # of Person Crimes</th>
+                            <th>Temperature (F)</th>
+                            <th>Temp Category</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>January</th>
+                            <td>128</td>
+                            <td>43</td>
+                            <td>Cold</td>
+                          </tr>
+                          <tr>
+                            <th>February</th>
+                            <td>120</td>
+                            <td>46</td>
+                            <td>Cold</td>
+                          </tr>
+                          <tr>
+                            <th>March</th>
+                            <td>144</td>
+                            <td>55</td>
+                            <td>Cool</td>
+                          </tr>
+                          <tr>
+                            <th>April</th>
+                            <td>134</td>
+                            <td>66</td>
+                            <td>Cool</td>
+                          </tr>
+                          <tr>
+                            <th>May</th>
+                            <td>146</td>
+                            <td>76</td>
+                            <td>Warm</td>
+                          </tr>
+                          <tr>
+                            <th>June</th>
+                            <td>147</td>
+                            <td>84</td>
+                            <td>Hot</td>
+                          </tr>
+                          <tr>
+                            <th>July</th>
+                            <td>135</td>
+                            <td>88</td>
+                            <td>Hot</td>
+                          </tr>
+                          <tr>
+                            <th>August</th>
+                            <td>134</td>
+                            <td>87</td>
+                            <td>Hot</td>
+                          </tr>
+                          <tr>
+                            <th>September</th>
+                            <td>157</td>
+                            <td>80</td>
+                            <td>Warm</td>
+                          </tr>
+                          <tr>
+                            <th>October</th>
+                            <td>138</td>
+                            <td>68</td>
+                            <td>Warm</td>
+                          </tr>
+                          <tr>
+                            <th>November</th>
+                            <td>142</td>
+                            <td>58</td>
+                            <td>Cool</td>
+                          </tr>
+                          <tr>
+                            <th>December</th>
+                            <td>136</td>
+                            <td>46</td>
+                            <td>Cold</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="col">
+                      <span class="card-body card border-success float-right ml-1 p-3" style="max-width: 20rem;">
+                        <h6 class="card-subtitle mb-2"><strong>Regression coefficients</strong></h6>
+                        <p class="card-subtitle mb-1 text-secondary">r-value: 0.501305162690757</p>
+                        <p class="card-subtitle text-secondary">r<sup>2</sup>: 0.2513068661404063</p>
+                      </span>
+                      <p> 
+                        The number of crimes against person seems to be lower on average from December to February during 2017-2019.
+                        The r-value of our linear regression model suggests a moderate positive correlation between temperature and the average number of crimes agaisnt person. 
+                        The r<sup>2</sup> value is very low, suggesting that the predictive power of our regression is not very reliable (we only have 12 values for the temperature data!).</p>
+                      <div class="row">
+                        <div class="col-4">
+                          <table class="table table-hover table-sm text-center">
+                            <thead>
+                              <tr class="table-light">
+                                <th>Avg # of Person Crimes</th>
+                                <th>Temperature Category</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>Cold</th>
+                                <td>128</td>
+                              </tr>
+                              <tr>
+                                <th>Cool</th>
+                                <td>140</td>
+                              </tr>
+                              <tr>
+                                <th>Warm</th>
+                                <td>147</td>
+                              </tr>
+                              <tr>
+                                <th>Hot</th>
+                                <td>138</td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <th colspan="2"><i>p</i>-value: 0.010577592770864664</th>
+                            </tfoot>
+                          </table>
+                        </div>
+                        <div class="col-8">
+                          <p>When categorizing the temperature of each month into 4 groups, we noticed that the number of crimes against person seems to be lower when the tempearture is colder, and higher when the temperature is warmer.
+                          <p>We performed hypothesis testing to determine whethere any difference in temperature category is statistically significant.
+                            Our result shows that the Cold and Warm groups are significantly different from others, with the <i>p</i>-value of < 0.05. 
+                            When the temperature is considered cold, there is less crime against person compared to when the temperature is considered warm. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Society -->
+                  <br>
+                  <h3 class="text-secondary">Crime Agaisnt Society</h3>
+                  <div class="row">
+                  <div class="col">
+                  <a href="asset/society_crime.png" target="_blank"><img src="asset/society_crime.png" alt="society_crime" width="450px"></a>
+                  <a href="asset/society_crime_reg.png" target="_blank"><img src="asset/society_crime_reg.png" alt="society_crime_regression" width="450px"></a>
+                  </div>
+                  <div class="col">
+                    <table class="table table-hover table-sm text-center">
+                      <thead>
+                        <tr class="table-light">
+                          <th>Month</th>
+                          <th>Avg # of Society Crimes</th>
+                          <th>Temperature (F)</th>
+                          <th>Temp Category</th>
+                        </tr> 
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>January</th>
+                          <td>525</td>
+                          <td>43</td>
+                          <td>Cold</td>
+                        </tr>
+                        <tr>
+                          <th>February</th>
+                          <td>528</td>
+                          <td>46</td>
+                          <td>Cold</td>
+                        </tr>
+                        <tr>
+                          <th>March</th>
+                          <td>617</td>
+                          <td>55</td>
+                          <td>Cool</td>
+                        </tr>
+                        <tr>
+                          <th>April</th>
+                          <td>562</td>
+                          <td>66</td>
+                          <td>Cool</td>
+                        </tr>
+                        <tr>
+                          <th>May</th>
+                          <td>572</td>
+                          <td>76</td>
+                          <td>Warm</td>
+                        </tr>
+                        <tr>
+                          <th>June</th>
+                          <td>548</td>
+                          <td>84</td>
+                          <td>Hot</td>
+                        </tr>
+                        <tr>
+                          <th>July</th>
+                          <td>595</td>
+                          <td>88</td>
+                          <td>Hot</td>
+                        </tr>
+                        <tr>
+                          <th>August</th>
+                          <td>555</td>
+                          <td>87</td>
+                          <td>Hot</td>
+                        </tr>
+                        <tr>
+                          <th>September</th>
+                          <td>545</td>
+                          <td>80</td>
+                          <td>Warm</td>
+                        </tr>
+                        <tr>
+                          <th>October</th>
+                          <td>545</td>
+                          <td>68</td>
+                          <td>Warm</td>
+                        </tr>
+                        <tr>
+                          <th>November</th>
+                          <td>548</td>
+                          <td>58</td>
+                          <td>Cool</td>
+                        </tr>
+                        <tr>
+                          <th>December</th>
+                          <td>486</td>
+                          <td>46</td>
+                          <td>Cold</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                <div class="col">
+                  <span class="card-body card border-success float-right ml-1 p-3" style="max-width: 20rem;">
+                    <h6 class="card-subtitle mb-2"><strong>Regression coefficients</strong></h6>
+                    <p class="card-subtitle mb-1 text-secondary">r-value: 0.4488228102691732</p>
+                    <p class="card-subtitle text-secondary">r<sup>2</sup>: 0.20144191501791825</p>
+                    <!-- <br>
+                    <h6 class="card-subtitle mb-2"><strong>Hypothesis Testing</strong></h6>
+                    <p class="card-subtitle text-secondary">ANOVA <i>p</i>-value: 0.3226899695413077</p> -->
+                  </span>
+                  <p> 
+                    The number of crimes against society seems to have a spike in March during 2017-2019. The number of crimes peaks in July of 2018, and steadily declines from March in 2019. 
+                    The r-value suggests a relatively weak positive correlation between temperature and the average number of crimes agaisnt society. 
+                    The r<sup>2</sup> value is, again, very low.</p>
+                  <div class="row">
+                    <div class="col-4">
+                      <table class="table table-hover table-sm text-center">
+                        <thead>
+                          <tr class="table-light">
+                            <th>Avg # of Socierty Crimes</th>
+                            <th>Temperature Category</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>Cold</th>
+                            <td>513</td>
+                          </tr>
+                          <tr>
+                            <th>Cool</th>
+                            <td>575</td>
+                          </tr>
+                          <tr>
+                            <th>Warm</th>
+                            <td>554</td>
+                          </tr>
+                          <tr>
+                            <th>Hot</th>
+                            <td>566</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <th colspan="2"><i>p</i>-value: 0.3226899695413077</th>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <div class="col-8">
+                      <p>There is no notable difference in the average number of crimes when we binned the data into 4 groups of temperature category.
+                      <p>Our statistical test shows no statistical significance in the difference in the number of crimes against society between each temperature category, with the <i>p</i>-value of > 0.05. 
+                        The temperature does not seem to have any influence on the number of crimes agaisnt society.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+                
+                <!-- Property -->
+                <br>
+                <h3 class="text-secondary">Crime Agaisnt Property</h3>
+                <div class="row">
+                <div class="col">
+                <a href="asset/property_crime.png" target="_blank"><img src="asset/property_crime.png" alt="property_crime" width="450px"></a>
+                <a href="asset/property_crime_reg.png" target="_blank"><img src="asset/property_crime_reg.png" alt="property_crime_regression" width="450px"></a>
+                </div>
+                <div class="col">
+                  <table class="table table-hover table-sm text-center">
+                    <thead>
+                      <tr class="table-light">
+                        <th>Month</th>
+                        <th>Avg # of Property Crimes</th>
+                        <th>Temperature (F)</th>
+                        <th>Temp Category</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>January</th>
+                        <td>630</td>
+                        <td>43</td>
+                        <td>Cold</td>
+                      </tr>
+                      <tr>
+                        <th>February</th>
+                        <td>572</td>
+                        <td>46</td>
+                        <td>Cold</td>
+                      </tr>
+                      <tr>
+                        <th>March</th>
+                        <td>588</td>
+                        <td>55</td>
+                        <td>Cool</td>
+                      </tr>
+                      <tr>
+                        <th>April</th>
+                        <td>588</td>
+                        <td>66</td>
+                        <td>Cool</td>
+                      </tr>
+                      <tr>
+                        <th>May</th>
+                        <td>653</td>
+                        <td>76</td>
+                        <td>Warm</td>
+                      </tr>
+                      <tr>
+                        <th>June</th>
+                        <td>622</td>
+                        <td>84</td>
+                        <td>Hot</td>
+                      </tr>
+                      <tr>
+                        <th>July</th>
+                        <td>639</td>
+                        <td>88</td>
+                        <td>Hot</td>
+                      </tr>
+                      <tr>
+                        <th>August</th>
+                        <td>636</td>
+                        <td>87</td>
+                        <td>Hot</td>
+                      </tr>
+                      <tr>
+                        <th>September</th>
+                        <td>620</td>
+                        <td>80</td>
+                        <td>Warm</td>
+                      </tr>
+                      <tr>
+                        <th>October</th>
+                        <td>694</td>
+                        <td>68</td>
+                        <td>Warm</td>
+                      </tr>
+                      <tr>
+                        <th>November</th>
+                        <td>596</td>
+                        <td>58</td>
+                        <td>Cool</td>
+                      </tr>
+                      <tr>
+                        <th>December</th>
+                        <td>637</td>
+                        <td>46</td>
+                        <td>Cold</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col">
+                  <span class="card-body card border-success float-right ml-1 p-3" style="max-width: 20rem;">
+                    <h6 class="card-subtitle mb-2"><strong>Regression coefficients</strong></h6>
+                    <p class="card-subtitle mb-1 text-secondary">r-value: 0.501305162690757</p>
+                    <p class="card-subtitle text-secondary">r<sup>2</sup>: 0.2513068661404063</p>
+                  </span>
+                  <p> 
+                    The number of crimes against property seems to have multiple spikes through out the year during 2017-2019, with October having the overall highest numbers. The number of crimes peaks in July of 2018, and steadily declines from March in 2019. 
+                    The very small r and r<sup>2</sup> values sugges a very weak positive correlation between temperature and the average number of crimes agaisnt property, and the low predictive power of the regression model. 
+                  <div class="row">
+                  <div class="col-4">
+                    <table class="table table-hover table-sm text-center">
+                      <thead>
+                        <tr class="table-light">
+                          <th>Avg # of Property Crimes</th>
+                          <th>Temperature Category</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Cold</th>
+                          <td>613</td>
+                        </tr>
+                        <tr>
+                          <th>Cool</th>
+                          <td>590</td>
+                        </tr>
+                        <tr>
+                          <th>Warm</th>
+                          <td>655</td>
+                        </tr>
+                        <tr>
+                          <th>Hot</th>
+                          <td>632</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <th colspan="2"><i>p</i>-value: 0.0764740094854059</th>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <div class="col-8">
+                  <p>When binning the data into 4 groups of temperature category, the Warm and Hot groups seem to have higher average number of crimes.
+                  <p>Our statistical test, however, shows no statistical significance in the difference in the number of crimes against propery between each temperature category, with the <i>p</i>-value of > 0.05. 
+                    We cannot say that temperature has influence on the number of crimes agaisnt property.</p>
+                  </div>
+                </div>
+                  </div>
+                  </div>
+
+              </div> 
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+         
+        <div class="col-md-2">
+            <div class="list-group">
+                <a href="crime_weather_intro.html" class="list-group-item list-group-item-action">Introduction</a>
+                <a href="crime_weather_method.html" class="list-group-item list-group-item-action">Data & Methodology</a>
+                <a href="#" class="list-group-item list-group-item-action active">Results & Analysis</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.miJujubes carrot cake chocolate cake cupcake toffee cupcake pudding fruitcake chupa chups. Toffee lollipop cupcake. Danish caramels macaroon lemon drops candy canes.n.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+    
+    </html>
+           
