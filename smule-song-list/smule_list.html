@@ -19,7 +19,7 @@
         <div class="col-md-12">
           <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h2 class="pb-3 pt-3 text-primary"><strong>ETL: All Songs in Smule🎤</strong></h2>
+              <h2 class="pb-3 pt-3 text-primary"><strong>All Songs We Sang Together in Smule🎤</strong></h2>
               <div class="row">
                 <div class="col">
                   
@@ -35,9 +35,6 @@
                       <a class="nav-link" data-toggle="tab" href="#transform">Transform</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#load">Load</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#analysis">Analysis</a>
                     </li>
                   </ul>
@@ -49,13 +46,31 @@
                         <a href="https://www.smule.com/" target="_blank">Smule</a> is a social singing app that I use to sing 
                         with other people around the world. I am quite active in it for various reason, but I wouldn't go so far to say that I am <a href="https://www.netflix.com/title/80198505" target="_blank">Retsuko</a> in real-life. 
                         My bestie does like to think that way though 😜</p>
-                        <p>I have developed quite a good relationship with some of the people I sing with in the app. After singing togehter for a few years
-                            I couldn't help thinking, <i class='text-danger'>'How many songs have we sung together in total?'</i> Unfortunately, Smule -just like any other social media- does not
-                            really give you a year-end report of your activity like how you would get your credit card usage statement 😂</p>
-                        
-                        <p>Yes, I am very obssessed with this! This started of with the goal of figuring out the total number of songs, but once things got kick into motion there was no stopping it🤩
-                             Besides, this is MY data, and what could be better than using my own data to demonstrate my coding skills AND my interest!?</p>
-                      <p> <h5 class='text-secondary'><strong>Goal</strong></h5>
+                      <p><h5 class='text-secondary'><strong>Motivation</strong></h5>
+                        <p>After singing togehter with the same people for a few years, I couldn't help thinking, <i class='text-danger'>'How many songs have we sung together in total? What have we sung so far?'</i> Unfortunately, Smule -just like any other social media- does not
+                            really give you a year-end report like how you would get your credit card usage statement😂</p>
+                        <div class="row mb-3">
+                          <div class="col-6">
+                            <a><img class="rounded mx-auto d-block" src="asset/smule_page.PNG" alt="smule_page" width="85%"></a>
+                          </div>
+                          <div class="col-6">
+                            <p>To get the songs listed on the page in Smule is quite endless. You have to scroll through the page. As you scroll down, the page will give more content until you hit the first song you have ever sung. 
+                              Imagine there's over 1000s of songs on your page and the page shows only 25 at a time...and your internet suddenly crashes☠ <i>You get the idea, right?</i></p>
+                            <p>Now let's say you were really passionate about finding the list of all songs and scrolled through those 100s of pages (FYI: Even I don't do that!), 
+                              you will probably have to <i>copy + paste</i> the specific item on the page into some sort of a spreadsheet field by field and one by one.
+                              You can pay an intern to do this for months. Or just let the code do it for you🤓</p>
+                            <p>Yes, I am very obssessed with getting those data! What could be better than using my own singing data to demonstrate my coding skills AND my personal life interest!?</p>
+                            <h5 class='text-muted'><strong>Skills to show off</strong></h5>
+                            <ul>
+                              <li>Python: Libraries used include json, pandas and requests</li> 
+                              <li>PostgreSQL: Database of my choice</li>
+                              <li>SQL: Running queries</li>
+                              <li>Jupyter notebook: Where I ran all my python code</li>
+                            </ul>
+                          
+                          </div>
+                        </div>
+                        <p> <h5 class='text-secondary'><strong>Goal</strong></h5>
                         <p>I am going to turn this blob of information to a nice table and run some analysis with it ( •̀ ω •́ )✧</p>
                         <div class="row mb-2">
                             <div class="col-4">
@@ -72,13 +87,7 @@
                             </div>
                         </div>
                         <p class="text-right" ><i>All those years of working in clinical research and patient's confidentiality sure drilled me good with PII redaction skills</i> 😉</p>
-                        <h5 class='text-secondary'><strong>Skills to show off</strong></h5>
-                          <ul>
-                            <li>Python: libraries used include json, pandas and requests</li> 
-                            <li>PostgreSQL: database of my choice</li>
-                            <li>SQL: for running all the queries</li>
-                            <li>Jupyter notebook: this is where I ran all my python code</li>
-                          </ul>
+
                     </div>
                     <!-- EXTRACT -->
                     <div class="tab-pane fade" id="extract">
@@ -86,9 +95,9 @@
                       <p>Trying to get my hands on the data was actually the hardest part of this project. Here's my journey:</p>
                       <ul>
                         <li><i>Any API request? Nope... Okay, fine.</i></li> 
-                        <li><i>No year-end report in any format. So, stop wasting time lamenting. Moving on..</i></li>
+                        <li><i>No year-end report in any format? </i></li>
                         <li><i>Web scraping with BeautifulSoup (python): ...code can't be soupify...</i></li>
-                        <li>MORE GOOGLE!</li>
+                        <li><i>Alright I'm gonna stop wasting time lamenting. Moving on..</i> MORE GOOGLE!</li>
                       </ul>
                       <p>From googling around, I finally got my hands on the URL where I can get the data I need in a json format. Bless those beautiful souls for sharing the URL on <a href="https://stackoverflow.com/questions/50074596/list-of-followers-and-recordings-of-smule" target="_blank"> stackoverflow</a> and
                         <a href="https://sing.salon/forums/topic/614-introducing-sing-insights-beta/" target="_blank"> Sing Salon</a>.</p>
@@ -120,7 +129,17 @@
                           </div>
                         </div>
                       </div>
-
+                      <p><h5 class='text-secondary'><strong>Multiple Issues...</strong></h5> 
+                      <p>Unfortunately, the code that I shared for Data Extraction does not always work on the first go. I was able to run the whole notebook in one-go
+                        one day, the 2nd loop got an error on another. Also, each time I ran the code, I will have to wait at least 30 minutes before I ran the same <i>request</i> code and I would not be able to have access to Smule page for similar amount
+                        (got a 418 Error Code). Until now, I still couldn't figure out how to bypass the rate limitation on making request for the json data. I added errors & exceptions which seemed to work, 
+                        but later on gave the same result as the code without <i>try-except</i>. I tried adding <i>time.sleep(2)</i> and that didn't do anything either.
+                      
+                      <p>As a last resort, instead of making two requests (2 usernames, 2 URLs) in the same notebook I made only 1 request on just 1 username.
+                        I exported the output to csv, waited 30 minutes to restart & rerun the code with the 2nd username, and exported that 2nd csv. Then, I appended 
+                        the two dataframes and reset the index (need to do this for SQL database) before exporting that final dataframe to csv to be loaded. A whole set of jupyter notebooks were created for this alternative method.
+                        <i>Yeah, I know. I AM obssessed with getting these data.</i> Imagine how many 30-min-wait time I had to do while debugging... 😭 </p>
+                      
                     <!-- Transform -->
                     </div>
                     <div class="tab-pane fade" id="transform">
@@ -151,7 +170,7 @@
                       </p>
                     
                     </div>
-                    <div class="tab-pane fade" id="load">
+                    <div class="tab-pane fade" id="analysis">
                       <!-- SQL schema -->
                       <p><h5 class='text-secondary'><strong>Setting up Database</strong></h5> 
                       <p>Again, I use postgreSQL as my database to run my SQL query. I created a database within pgAdmin before creating a table with the following code before I imported my csv:</p>
@@ -161,9 +180,7 @@
                       <p><i>Oh my gosh!</i> I am finally getting my long-awaited results🤩 Here are some of the queries I ran:</p>
                       <a><img src="asset/query.PNG" alt="query" width="50%"></a>
                     </div>
-                    <div class="tab-pane fade" id="analysis">
-                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
-                    </div>
+
                   </div>
                 
                 
