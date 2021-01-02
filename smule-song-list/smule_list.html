@@ -6,7 +6,7 @@
   <title>Smule: List of Songs</title>
   <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="..\lumen.css">
+  <link rel="stylesheet" href="../css/lumen.css">
 </head>
 
 
@@ -30,13 +30,13 @@
                       <a class="nav-link active" data-toggle="tab" href="#home">Intro</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#extract">Extract</a>
+                      <a class="nav-link" data-toggle="tab" href="#extract">Extract & Clean-up</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <a class="nav-link" data-toggle="tab" href="#transform">Transform</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#analysis">Analysis</a>
+                        <a class="nav-link" data-toggle="tab" href="#analysis">Tabulation</a>
                     </li>
                   </ul>
 
@@ -72,7 +72,10 @@
                           </div>
                         </div>
                         <p> <h5 class='text-secondary'><strong>Goal</strong></h5>
-                        <p>I am going to turn this blob of information to a nice table and run some analysis with it ( •̀ ω •́ )✧</p>
+                        <p>I am going to turn this blob of information to a nice table and run some numbers with it ( •̀ ω •́ )✧</p>
+                        <p>Then, I can keep tabs on how many times my buddy joined me VS how many times I joined them. Time to evaluate
+                          if I should participate less or more to keep the balance🙄 Jk!</p>
+                        
                         <div class="row mb-2">
                             <div class="col-4">
                               <h5 class="text-center text-success">Blob of Info</h5>
@@ -87,10 +90,10 @@
                               </div>
                             </div>
                         </div>
-                        <p class="text-right" ><i>All those years of working in clinical research and patient's confidentiality sure drilled me good with PII redaction skills</i> 😉</p>
+                        <p><i>I want to be respectful of my singing buddies' privacy, so I will redact everything that can trace back to them. All those years of working in clinical research and patient's confidentiality sure drilled me good with PII redaction skills</i> 😉</p>
 
                     </div>
-                    <!-- EXTRACT -->
+                    <!-- EXTRACT/Clean-up -->
                     <div class="tab-pane fade" id="extract">
                       <p><h5 class='text-secondary'><strong>Data Fishing</strong></h5> 
                       <p>Trying to get my hands on the data was actually the hardest part of this project. Here's my journey:</p>
@@ -142,8 +145,6 @@
                         <i>Yeah, I know. I AM obssessed with getting these data.</i> Imagine how many 30-min-wait time I had to do while debugging... 😭 </p>
                       
                     <!-- Transform -->
-                    </div>
-                    <div class="tab-pane fade" id="transform">
                       <p><h5 class='text-secondary'><strong>Cleaning Up</strong></h5> 
                       <p>Most of the data returned is actually pretty clean, but I want the data to get spit out in a certain way. 
                         I tweaked the output of the two fields: date ("created_at") and web URL ("web_url"). 
@@ -167,8 +168,9 @@
                       <p><h5 class='text-secondary'><strong>Write to CSV</strong></h5> 
                       <p>I ran the code to import the dataframe to csv.</p>
                       <strong class='text-muted'>NICE TABLE ACQUIRED</strong>✨
-                      
                     </div>
+
+                    <!-- Tabulation -->
                     <div class="tab-pane fade" id="analysis">
                       <!-- SQL schema -->
                       <p><h5 class='text-secondary'><strong>Setting up Database</strong></h5> 
@@ -176,7 +178,7 @@
                       <a><img src="asset/load.PNG" alt="load_table" width="85%"></a>
                       <p>Once the data has been dumped, it's time to go to town with it! ✊</p>
                       <p><h5 class='text-secondary'><strong>Query</strong></h5>
-                      <p><i>Oh my gosh!</i> I am finally getting my long-awaited results🤩 Here are some of the queries I ran:</p>
+                      <p><i>Oh my gosh. Moment of truth!</i> I am finally getting my long-awaited results🤩 Here are some of the queries I ran:</p>
                       <a><img src="asset/query.PNG" alt="query" width="50%"></a>
                     </div>
 
