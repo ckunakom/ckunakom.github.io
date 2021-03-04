@@ -32,12 +32,12 @@
                     <li class="nav-item">
                       <a class="nav-link" data-toggle="tab" href="#extract">Extract & Clean-up</a>
                     </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#transform">Transform</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#analysis">Tabulation</a>
+                        <a class="nav-link" data-toggle="tab" href="#db_query">Load & Query</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#report">Report</a>
+                  </li>
                   </ul>
 
                   <!-- Home -->
@@ -170,19 +170,172 @@
                       <strong class='text-muted'>NICE TABLE ACQUIRED</strong>✨
                     </div>
 
-                    <!-- Tabulation -->
-                    <div class="tab-pane fade" id="analysis">
+                    <!-- Load & Query -->
+                    <div class="tab-pane fade" id="db_query">
                       <!-- SQL schema -->
                       <p><h5 class='text-secondary'><strong>Setting up Database</strong></h5> 
                       <p>Again, I use postgreSQL as my database to run my SQL query. I created a database within pgAdmin before creating a table with the following code before I imported my csv:</p>
                       <a><img src="asset/load.PNG" alt="load_table" width="85%"></a>
-                      <p>Once the data has been dumped, it's time to go to town with it! ✊</p>
+                      <p>Once the data has been dumped, it's time to look at some numbers and make some decisions for the future!</p>
                       <p><h5 class='text-secondary'><strong>Query</strong></h5>
-                      <p><i>Oh my gosh. Moment of truth!</i> I am finally getting my long-awaited results🤩 Here are some of the queries I ran:</p>
-                      <a><img src="asset/query.PNG" alt="query" width="50%"></a>
+                      <p>Here are some of the simple queries I ran:</p>
+                      <a><img src="asset/query.PNG" alt="query" width="600px"></a>
                     </div>
 
+                    <!-- Report -->
+                    <div class="tab-pane fade" id="report">
+                      <p><h5 class='text-secondary'><strong>Results & Insight</strong></h5>
+                        <p>Since the day I started singing (24-SEP-2016) until the date the data is extracted (12-SEP-2020), I have sung a total of <strong>1858</strong> songs.</p>
+                        
+                        <div class='row'>
+                          <div class='col-4'></div>
+                          <div class='col-4'>
+                            <table class="table table-sm">
+                              <thead class=thead-light>
+                                <tr>
+                                  <th scope="col">Type</th>
+                                  <th scope="col">Number of Songs</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Creating</th>
+                                  <td>869</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Joining</th>
+                                  <td>989</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>                          
+                          <div class='col-4'></div>
+                          <p>There are 869 recordings I created, either a solo or a duet for others to join. I have joined others on 989 songs.</p>
+                        </div>
+
+                        
+                        <div class='row'>
+                          <div class='col-4'>
+                            <table class="table table-sm">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Year</th>
+                                  <th scope="col">Number of Songs</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">2016</th>
+                                  <td>106</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2017</th>
+                                  <td>746</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2018</th>
+                                  <td>453</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2019</th>
+                                  <td>327</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2020</th>
+                                  <td>226</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          
+                          <div class='col-8'>
+                            <p>Yearly</p>
+                            <ul>
+                              <li>The most singing happens in 2017.</li>
+                              <li>Though there are 106 songs in 2016, this is the amount sung within 4 months (start date is September)</li>
+                              <li>The amount of singing declines in 2018 by almost 40% compared to the year 2017. </li>                        
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class='row'>
+                          <div class='col-4'>
+                            <table class="table table-sm">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Month</th>
+                                  <th scope="col">Number of Songs</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>106</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>746</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>453</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td>327</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">6</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">7</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">8</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">9</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">10</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">11</th>
+                                  <td>226</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">12</th>
+                                  <td>226</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class='col-8'>
+                            <p>Monthly</p>
+                            <ul>
+                              <li>The most singing happens in 2017.</li>
+                              <li>Though there are 106 songs in 2016, this is the amount sung within 4 months (start date is September)</li>
+                              <li>The amount of singing declines in 2018 by almost 40% compared to the year 2017. </li>                        
+                            </ul>
+                          </div>
+                        </div>
+
+                    </div>
+                    
+
                   </div>
+
+                  
                 
                 
                 </div>
