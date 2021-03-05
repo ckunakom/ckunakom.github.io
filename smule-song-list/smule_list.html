@@ -20,7 +20,7 @@
         <div class="col-md-12">
           <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h2 class="pb-3 pt-3 text-primary"><strong>All Songs We Sang Together in Smule🎤</strong></h2>
+              <h2 class="pb-3 pt-3 text-primary"><strong>All Songs in Smule🎤</strong></h2>
               <div class="row">
                 <div class="col">
                   
@@ -72,9 +72,8 @@
                           </div>
                         </div>
                         <p> <h5 class='text-secondary'><strong>Goal</strong></h5>
-                        <p>I am going to turn this blob of information to a nice table and run some numbers with it ( •̀ ω •́ )✧</p>
-                        <p>Then, I can keep tabs on how many times my buddy joined me VS how many times I joined them. Time to evaluate
-                          if I should participate less or more to keep the balance🙄 Jk!</p>
+                        <p>I want to know what does my singing activity look like since I started using this app in 2016. ( •̀ ω •́ )✧</p>
+                        <p>All this work just for that? YEAH!</p>
                         
                         <div class="row mb-2">
                             <div class="col-4">
@@ -159,14 +158,14 @@
                         </ul>
                       </p>
                       <p><h5 class='text-secondary'><strong>Extra Clean-up</strong></h5>
-                      <p>I did an extra clean-up step to replace the real date with a fake one and to also replace the actual username with just '-username-' 🙄</p>
+                      <p>I did an extra clean-up step to replace the real date with a fake one and to also replace the actual username with just '-username-' for demo purpose.</p>
                       <p><h5 class='text-secondary'><strong>Creating Dataframe🐼</strong></h5> 
                       <p>Once all the data is in the format I want, it's time for pandas to shine!</p>
                       <div class="text-center pb-2">
                         <a><img src="asset/transform.PNG" alt="transform_table" width="85%"></a>
                       </div>
                       <p><h5 class='text-secondary'><strong>Write to CSV</strong></h5> 
-                      <p>I ran the code to import the dataframe to csv.</p>
+                      <p>I ran the code to import the dataframe to csv. <i>So I can show off my SQL querying skills!</i></p>
                       <strong class='text-muted'>NICE TABLE ACQUIRED</strong>✨
                     </div>
 
@@ -184,22 +183,22 @@
 
                     <!-- Report -->
                     <div class="tab-pane fade" id="report">
-                      <p><h5 class='text-secondary'><strong>Results & Insight</strong></h5>
+                      <p><h5 class='text-secondary'><strong>Results</strong></h5>
                         <p>Since the day I started singing (24-SEP-2016) until the date the data is extracted (12-SEP-2020), I have sung a total of <strong>1858</strong> songs.</p>
                         
                         <div class='row'>
                           <div class='col-4'></div>
                           <div class='col-4'>
                             <table class="table table-sm">
-                              <thead class=thead-light>
+                              <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Type</th>
+                                  <th scope="col">Collaboration type</th>
                                   <th scope="col">Number of Songs</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <th scope="row">Creating</th>
+                                  <th scope="row">Inviting</th>
                                   <td>869</td>
                                 </tr>
                                 <tr>
@@ -208,16 +207,68 @@
                                 </tr>
                               </tbody>
                             </table>
-                          </div>                          
-                          <div class='col-4'></div>
+                                                    
+
+                            <table class="table table-sm">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">Invitation Spawner</th>
+                                  <th scope="col">Number of Songs</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Buddy1</th>
+                                  <td>110</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Buddy2</th>
+                                  <td>56</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Buddy3</th>
+                                  <td>54</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Buddy4</th>
+                                  <td>44</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Buddy5</th>
+                                  <td>39</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Buddy6</th>
+                                  <td>36</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">...</th>
+                                  <td>...</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">StrangerY</th>
+                                  <td>1</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">StrangerZ</th>
+                                  <td>1</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
                           <p>There are 869 recordings I created, either a solo or a duet for others to join. I have joined others on 989 songs.</p>
+                          <p>Out of those 989 songs, I have sung with <strong>185</strong> different smule-users. I sang as many as 100s songs with 1 person and as little as 1 song.</p>
+                        </div>
+                       
+                        <div class='row'>
+                          <p>Now, let's just look at my own singing activity for these past years:</p>
                         </div>
 
-                        
                         <div class='row'>
                           <div class='col-4'>
                             <table class="table table-sm">
-                              <thead>
+                              <thead class="thead-light">
                                 <tr>
                                   <th scope="col">Year</th>
                                   <th scope="col">Number of Songs</th>
@@ -254,6 +305,9 @@
                               <li>The most singing happens in 2017.</li>
                               <li>Though there are 106 songs in 2016, this is the amount sung within 4 months (start date is September)</li>
                               <li>The amount of singing declines in 2018 by almost 40% compared to the year 2017. </li>                        
+                              <ul><li>Probably because I started a new job as a CRA -all the travelling and being K.O. when coming back from the work trip.
+                                I remember being so wiped that I hardly had any energy to sing and spawn out invites during the weekend.
+                              </li></ul>
                             </ul>
                           </div>
                         </div>
@@ -261,7 +315,7 @@
                         <div class='row'>
                           <div class='col-4'>
                             <table class="table table-sm">
-                              <thead>
+                              <thead class="thead-light">
                                 <tr>
                                   <th scope="col">Month</th>
                                   <th scope="col">Number of Songs</th>
@@ -270,51 +324,51 @@
                               <tbody>
                                 <tr>
                                   <th scope="row">1</th>
-                                  <td>106</td>
+                                  <td>203</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">2</th>
-                                  <td>746</td>
+                                  <td>182</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">3</th>
-                                  <td>453</td>
+                                  <td>152</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">4</th>
-                                  <td>327</td>
+                                  <td>148</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">5</th>
-                                  <td>226</td>
+                                  <td>173</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">6</th>
-                                  <td>226</td>
+                                  <td>186</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">7</th>
-                                  <td>226</td>
+                                  <td>159</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">8</th>
-                                  <td>226</td>
+                                  <td>139</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">9</th>
-                                  <td>226</td>
+                                  <td>116</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">10</th>
-                                  <td>226</td>
+                                  <td>143</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">11</th>
-                                  <td>226</td>
+                                  <td>139</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">12</th>
-                                  <td>226</td>
+                                  <td>118</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -323,21 +377,124 @@
                           <div class='col-8'>
                             <p>Monthly</p>
                             <ul>
-                              <li>The most singing happens in 2017.</li>
-                              <li>Though there are 106 songs in 2016, this is the amount sung within 4 months (start date is September)</li>
-                              <li>The amount of singing declines in 2018 by almost 40% compared to the year 2017. </li>                        
+                              <li>The frequency of singing fluctuates throughout the year, with most of the singing happens in January.</li>
+                              <ul><li>This is likely because that is the coldest month in Minnesota and I  refused to leave my apartment for reasons other than work.</li></ul>
+                              <ul><li>Similar trend, though a little lower, in February as a wave of short-lived spring invited my presence out.</li></ul>                        
                             </ul>
+                            <p>Let's look at some of the songs that I sang most frequently next.</p>
+                            <p>From looking at the resulted table, there are <strong>1071</strong> songs with unique titles. Note that some of the songs have the same name but because they have 
+                            a unique title (depends on how the song being uploaded and whether it's acoustic, piano, guitar, etc.) within the app, they are being count separately.</p>
+                            <p><a href="https://youtu.be/wtqib5i-Z6I" target="_blank">Sarishinohara</a> is pretty easy to sing and a very popular one, I could see why I sang it so much. 
+                            <a href="https://youtu.be/6KNPNJHrv9I" target="_blank">Kokoronashi 【Short.】</a> is also popular, though the short version only. The note is pretty high! My favortie from 
+                            these list is actually just <a href="https://youtu.be/o7mGDBYNXPo" target="_blank">HEAVEN</a> 
+                            and <a href="https://youtu.be/M8KztgJ6ZYs" target="_blank">Shiwa</a>. <i>Oh, those URLs don't lead to my recording</i>🤭</p>
                           </div>
                         </div>
-
-                    </div>
                     
+                        <div class='row'>
+                          <div class='col-4'>
+                            <table class="table table-sm">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Song Title</th>
+                                  <th scope="col">Frequency</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Sarishinohara</td>
+                                  <td>14</td>
+                                </tr>
+                                <tr>
+                                  <td>Kokoronashi 【Short.】</td>
+                                  <td>14</td>
+                                </tr>
+                                <tr>
+                                  <td>Hitorinbo Envy</td>
+                                  <td>9</td>
+                                </tr>
+                                <tr>
+                                  <td>HEAVEN</td>
+                                  <td>9</td>
+                                </tr>
+                                <tr>
+                                  <td>Tokyo Teddy Bear</td>
+                                  <td>8</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class='col-4'>
+                            <table class="table table-sm">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Song Title</th>
+                                  <th scope="col">Frequency</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Magnet</td>
+                                  <td>8</td>
+                                </tr>
+                                <tr>
+                                  <td>Shiwa (しわ) -Romaji-</td>
+                                  <td>8</td>
+                                </tr>
+                                <tr>
+                                  <td>Ai no Scenario (TV Size)</td>
+                                  <td>8</td>
+                                </tr>
+                                <tr>
+                                  <td>Zoetrope</td>
+                                  <td>8</td>
+                                </tr>
+                                <tr>
+                                  <td>Yomosugara Kimi Omou [夜もすがら君想ふ / Romaji]</td>
+                                  <td>8</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class='col-4'>
+                            <table class="table table-sm">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Song Title</th>
+                                  <th scope="col">Frequency</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>The immoral memory, The lost memory</td>
+                                  <td>7</td>
+                                </tr>
+                                <tr>
+                                  <td>only my railgun</td>
+                                  <td>7</td>
+                                </tr>
+                                <tr>
+                                  <td>Sayoko [Original]</td>
+                                  <td>7</td>
+                                </tr>
+                                <tr>
+                                  <td>WAVE</td>
+                                  <td>7</td>
+                                </tr>
+                                <tr>
+                                  <td>Acute</td>
+                                  <td>7</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                    </div>                    
 
-                  </div>
-
-                  
-                
-                
+                      <p><h5 class='text-secondary'><strong>Insight</strong></h5>
+                      <p>That is a lot of singing, I guess? At this point, I can probably say I know how to sing over 1000 songs! <br>
+                        And yes, I am quite an <i>otaku</i>, based on the types of songs I sing 😉</p>                  
+                    
+                    </div>
                 </div>
               </div> 
             </div>
