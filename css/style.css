@@ -1,3 +1,9 @@
+#bioimage {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 #imgbox:hover {
     outline: 0px solid transparent;
     padding: 5px 5px;
