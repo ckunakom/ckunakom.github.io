@@ -1,0 +1,11 @@
+#imgbox:hover {
+    outline: 0px solid transparent;
+    padding: 5px 5px;
+    border: 2px solid #008cba;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+#umn li {
+  list-style-type: "\01F4CC";
+}

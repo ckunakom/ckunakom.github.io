@@ -11195,17 +11195,3 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
 .toast .close:not(:disabled):not(.disabled):focus {
   color: #000;
 }
-
-#bioimage {
-  margin-right: 15px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-#imgbox:hover {
-  outline: 0px solid transparent;
-  padding: 5px 5px;
-  border: 2px solid #008cba;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
