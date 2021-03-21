@@ -48,67 +48,73 @@
   </nav>
 
   <!-- Content-->
-  <div class="container-fluid"> 
+  <div class="container"> 
     <div class="row mb-2">
-      <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
                 <h1 class="pb-3 pt-3 border-bottom">Projects</h1>
-                <p>マカロン ショコラ カヌレ タルトレット マシュマロ ガトーショコラ.</p>
+                <p>Personal projects utilizing the skills I picked up from the coding bootcamp.</p>
                 <div class="row pb-3">      
-                  <div class='col-6'>               
+                  <div class='col-4'>               
                     <!-- <div class="card-deck pb-3"> -->
-                    <div class="card" id="imgbox">
-                      <a href="https://ckunakom.github.io/my_smule_record/" target="_blank">
-                        <img class="card-img-top" src="img/data-mining.png" alt="data-mining" height= "280px" width="577px">
-                      </a>
-                      <div class="card-body">
-                        <h4 class="card-title text-primary">Data Mining: Smule App Data</h4>
-                        <p class="card-text">Mining raw data from Smule app in JSON format with API request and turn it to csv file using Python. Also loading data into an SQL server to look at them with simple SQL query.</p>
+                    <a href="https://ckunakom.github.io/my_smule_record/" target="_blank">
+                      <div class="card" id="imgbox">
+                          <img class="card-img-top" src="img/data-mining.png" alt="data-mining">
+                        <div class="card-body">
+                          <h4 class="card-title text-primary">Data Mining: Smule App Data</h4>
+                          <p class="card-text" id="aProject">Mining raw data from Smule app in JSON format with API request and turn it to csv file using Python. Also loading data into an SQL server to look at them with simple SQL query.</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                     
-                  <div class='col-6'>
-                    <div class="card" id="imgbox">
-                      <a href="https://ckunakom.github.io/smule-data-visual/" target="_blank">
-                        <img class="card-img-top" src="img/data-visual.png" alt="data-visual" height= "280px" width="577px">
-                      </a>
-                      <div class="card-body">
-                        <h4 class="card-title text-primary">Data Visualization: Smule App Data</h4>
-                        <p class="card-text">Analysis and visualization created from Tableau, using a more current and elaborated data extracted from the Smule app. A continuation of the <a href="https://ckunakom.github.io/my_smule_record/" target="_blank">Data Mining: Smule App Data</a> project.</p>
+                  <div class='col-4'>
+                    <a href="https://ckunakom.github.io/smule-data-visual/" target="_blank">
+                      <div class="card" id="imgbox">                
+                          <img class="card-img-top" src="img/data-visual.png" alt="data-visual">                        
+                        <div class="card-body">
+                          <h4 class="card-title text-primary">Data Visualization: Smule App Data</h4>
+                          <p class="card-text"  id="aProject" >Analysis and visualization created from Tableau, using a more current and elaborated data extracted from the Smule app. 
+                            A continuation of the <a id="aGeneric" href="https://ckunakom.github.io/my_smule_record/" target="_blank">Data Mining: Smule App Data</a> project.</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
+                  </div>
+
+                  <div class='col-4'>
+                    <a href="https://ckunakom.github.io/CRF_edit_checks/" target="_blank">
+                      <div class="card" id="imgbox">                
+                        <img src="img/ec_crf1.PNG" alt="crf_ec">                        
+                        <div class="card-body">
+                          <h4 class="card-title text-primary">Clinical Data Management: eCRF & Edit Checks (in progress)</h4>
+                          <p class="card-text"  id="aProject" >Programmed edit checks on eCRF using javaScript to eliminate manual data review and data cleaning.</p>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
                 
                 <div class="row pb-3">
-                  <div class='col-8'>               
+                  <!-- <div class='col-8'>               
                     <h2 class='text-secondary border-bottom pt-3 pb-3'>Self-Challenge</h2>
                     <h4 class="text-primary">Clinical Data Management: eCRF & Edit Checks (in progress)</h4>
                     <p class="card-text">Programmed edit checks on eCRF using javaScript to eliminate manual data review and data cleaning.</p>
                       <a href="https://ckunakom.github.io/CRF_edit_checks/" target="_blank">
                         <img src="img/ec_crf.PNG" alt="crf_ec" width= "600px">
                       </a>
-                  </div>
-                  <div class="col-4" id="umn">
-                    <h2 class='text-secondary border-bottom pt-3 pb-3'>UMn: Data Visualization and Analytics Bootcamp</h2>
+                  </div> -->
+                  <div class="col" id="umn">
+                    <h3 class='text-secondary border-bottom pt-3 pb-3'>UMN: Data Visualization and Analytics Bootcamp</h3>
+                    <p>Here are some of the cool projects I worked on during my time in the bootcamp.</p>
 
-                    <li><a href="https://machine-learning-nba.herokuapp.com/" target="_blank">Predicting NBA Games Using Machine Learning</a><small> [Final Project]</small></li>
-                    <!-- <ul><li> Python 
-                        <ul><li>API: requests, json </li></ul> 
-                        <ul></li>Data work: pandas, jupyter notebook</li></ul>
-                        <ul></li>Setting up server: flask</li></ul>
-                        <ul></li>Machine Learning: tensorflow, sklearn, pickle</li></ul>
-                    </li></ul>
-                    <ul><li> Web Design & Web hosting
-                      <ul><li>HTML/CSS/JavaScript, Heroku</li></ul>
-                    </li></ul> -->
-                  <li><a href="https://ckunakom.github.io/NY-citibike/" target="_blank">New York Citi Bike Activity (Prior and During the COVID-19 Pandemic)</a></li>
-                    <!-- <ul><li>Data Cleaning: Python (pandas)</li></ul>
-                    <ul><li>Visualization: Tableau</li></ul> -->
-                  <li><a href="https://project21bees.herokuapp.com/" target="_blank">Visualizing Bee Colonies Across the United States</a> <small>[Project #2]</small></li>
+                    <li><a href="https://machine-learning-nba.herokuapp.com/" target="_blank">Predicting NBA Games Using Machine Learning</a> - <small>Select NBA player and team statistic data to predict the outcome of basketball games using Python's machine learning packages</small>
+                    </li>
+
+                  <li><a href="https://ckunakom.github.io/NY-citibike/" target="_blank">New York Citi Bike Activity (Prior and During the COVID-19 Pandemic)</a> - <small>Tableau dashboard illustrating how the COVID-19 pandemic affects the NY Citi Bike usage</small>
+                  </li>
+
+                  <li><a href="https://project21bees.herokuapp.com/" target="_blank">Visualizing Bee Colonies Across the United States</a> - <small></small></li>
                     <!-- <ul><li> Python 
                       <ul></li>Data work: pandas, jupyter notebook</li></ul>
                       <ul></li>Setting up server: flask</li></ul>
@@ -121,9 +127,12 @@
                       <ul><li> Web Design & Web hosting
                         <ul><li>HTML/CSS</li></ul>
                       </li></ul> -->
-                  <li><a href="https://ckunakom.github.io/earthquate-leaflet-map/" target="_blank">Real-time Visualization of Earthquakes Across    the Globe in the Last 7 Days</a></li>
-                      <!-- <ul><li>JavaScript: leaflet</li></ul> -->
-                  <li><a href="https://ckunakom.github.io/healthrisks_demographic/" target="_blank">Visualizing Trends in Health Risks and Demographics</a></li>
+                  <li><a href="https://ckunakom.github.io/earthquate-leaflet-map/" target="_blank">Real-time Visualization of Earthquakes Across the Globe in the Last 7 Days</a> - <small>
+                    Map view of the location of all the earthquakes that occurred in the last 7 days created by using javaScript's library called leaflet.</small>
+                  </li>
+
+                  <li><a href="https://ckunakom.github.io/healthrisks_demographic/" target="_blank">Visualizing Trends in Health Risks and Demographics</a>
+                  </li>
                       <!-- <ul><li>JavaScript: D3</li></ul> -->
                   <li><a href="https://ckunakom.github.io/MD_crime_weather/" target="_blank">Number of Crimes and Temperature</a><small> [Project #1]</small></li>
                       <!-- <ul><li>Python: pandas, matplotlib, lingress, scipy stats</li></ul> -->
@@ -133,22 +142,10 @@
 
 
 
-                
-
-
-
-
-                
-
-
-                  
               </div>
-
-
-    <!-- start  -->
-                
-                
-    <!-- ends -->
+            </div>
+        </div>
+    <!-- </div> -->
 
 
 

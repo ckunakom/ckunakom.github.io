@@ -6,12 +6,27 @@
 
 #imgbox:hover {
     outline: 0px solid transparent;
-    padding: 5px 5px;
-    border: 2px solid #008cba;
+    border: 1px solid #008cba;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
 
 #umn li {
-  list-style-type: "\01F4CC";
+  list-style-type: "\01F375";
 }
+
+/* #aProject a:hover, p:hover {
+  color: #222;
+  text-decoration: none;  
+} */
+
+#aProject a, p {
+  color: #222;
+  text-decoration: none;  
+}
+
+#aGeneric a {
+  color:#158cba;
+  
+}
+
