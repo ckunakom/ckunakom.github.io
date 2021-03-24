@@ -13,20 +13,23 @@
 
 #umn li {
   list-style-type: "\01F375";
+  padding-left: 8px;
+  padding-bottom: 8px;
 }
 
-/* #aProject a:hover, p:hover {
-  color: #222;
-  text-decoration: none;  
-} */
-
-#aProject a, p {
+#aProject a:first-child, p {
   color: #222;
   text-decoration: none;  
 }
 
-#aGeneric a {
-  color:#158cba;
-  
+a.project-card:hover {
+  text-decoration: none;
 }
 
+a.project-card:hover h4 {
+  text-decoration: underline;
+}
+
+.project-cards .card {
+  height: 100%;
+}
