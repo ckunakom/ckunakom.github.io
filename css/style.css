@@ -4,7 +4,7 @@
   margin-top: 10px;
 }
 
-#imgbox:hover {
+#imgbox-first:hover, #imgbox-second:hover, #imgbox-third:hover {
     outline: 0px solid transparent;
     border: 1px solid #008cba;
     -webkit-transition: all 0.2s ease-in-out;
@@ -32,4 +32,8 @@ a.project-card:hover h4 {
 
 .project-cards .card {
   height: 100%;
+}
+
+.col-xs-12 {
+  padding-bottom: 15px;
 }
