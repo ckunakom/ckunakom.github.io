@@ -1,0 +1,39 @@
+#bioimage {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#imgbox-first:hover, #imgbox-second:hover, #imgbox-third:hover, #imgbox-fourth:hover {
+    outline: 0px solid transparent;
+    border: 1px solid #008cba;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+#umn li {
+  list-style-type: "\01F375";
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+
+#aProject a:first-child, p {
+  color: #222;
+  text-decoration: none;  
+}
+
+a.project-card:hover {
+  text-decoration: none;
+}
+
+a.project-card:hover h4 {
+  text-decoration: underline;
+}
+
+.project-cards .card {
+  height: 100%;
+}
+
+.col-xs-12 {
+  padding-bottom: 15px;
+}
