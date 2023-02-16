@@ -12,7 +12,7 @@ var content = [
         url: "https://ckunakom.github.io/smule-data-visual",
         src: "img/data-visual.png",
         alt: "data-visual",
-        description: "Analysis and visualization created from Tableau, using a more current and elaborated data extracted from the Smule app. A '2.0' version of the <a href='https://ckunakom.github.io/my_smule_record/' target='_blank'>Data Mining: Smule App Data</a> project."
+        description: "Analysis and visualization created from Tableau, using a more elaborated data extracted from the Smule app. A '2.0' version of the <a href='https://ckunakom.github.io/my_smule_record/' target='_blank'>Data Mining: Smule App Data</a> project."
     },
 // list out the rest.
 // OY! don't forget to take into account that each line is 2 projects
