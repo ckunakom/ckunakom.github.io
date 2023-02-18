@@ -33,7 +33,7 @@ document.getElementById("repeat-nav-bar").innerHTML = navBarDom;
 // put active class on the current page
 $(function () {
   var path = window.location.pathname.split("/").pop();
-  console.log(path)
+
   if (path == "") {
     $('#navbarColor01 li:first')
     .addClass("active");
