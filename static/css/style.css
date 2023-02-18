@@ -4,7 +4,7 @@
   margin-top: 10px;
 }
 
-#imgbox-focus:hover, #imgbox-second:hover, #imgbox-third:hover, #imgbox-fourth:hover {
+#imgbox-focus:hover {
     outline: 0px solid transparent;
     border: 1px solid #008cba;
     -webkit-transition: all 0.2s ease-in-out;
