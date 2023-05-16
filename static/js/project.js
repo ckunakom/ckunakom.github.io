@@ -13,7 +13,7 @@ var analystContent = [
         url: "https://ckunakom.github.io/spotify-usage/",
         src: "img/spotify.PNG",
         alt: "spotify",
-        description: "Get an idea of what songs I have been listening to the most on Spotify these days. Probably a good indicator of what I will be singing!",
+        description: "Using Spotify Web API to get data on my most listened tracks and listing them out in a searchable table.",
         side: "right"
     },
     {
