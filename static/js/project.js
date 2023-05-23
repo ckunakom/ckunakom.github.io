@@ -1,19 +1,19 @@
 // --- Project Items --- //
 var analystContent = [
     {
+        title: "DIY: Spotify End of Year Wrap! [Web page in progress, see code in my github]",
+        url: "https://ckunakom.github.io/spotify-usage/",
+        src: "img/spotify.PNG",
+        alt: "spotify",
+        description: "Recreating Spotify End of Year Wrapped Dashboard with data extractaction using Spotify Web API, transformation using pandas module and loading it into Tableau",
+        side: "left"
+    },
+    {
         title: "Data Visualization: Smule App Data",
         url: "https://ckunakom.github.io/smule-data-visual",
         src: "img/data-visual.png",
         alt: "data-visual",
         description: "Analysis and visualization created from Tableau, using a more elaborated data extracted from the Smule app. A '2.0' version of the <a href='https://ckunakom.github.io/my_smule_record/' target='_blank'>Data Mining: Smule App Data</a> project.",
-        side: "left"
-    },
-    {
-        title: "My Top 50 Most Listened Tracks on Spotify",
-        url: "https://ckunakom.github.io/spotify-usage/",
-        src: "img/spotify.PNG",
-        alt: "spotify",
-        description: "Using Spotify Web API to get data on my most listened tracks and listing them out in a searchable table.",
         side: "right"
     },
     {
