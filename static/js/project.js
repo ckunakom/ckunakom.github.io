@@ -1,51 +1,55 @@
 // --- Project Items --- //
 var analystContent = [
-    {
-        title: "DIY: Spotify End of Year Wrap! [Web page in progress, see code in my github]",
-        url: "https://ckunakom.github.io/spotify-usage/",
-        src: "img/spotify.PNG",
-        alt: "spotify",
-        description: "Recreating Spotify End of Year Wrapped Dashboard with data extractaction using Spotify Web API, transformation using pandas module and loading it into Tableau",
-        side: "left"
-    },
-    {
-        title: "Data Visualization: Smule App Data",
-        url: "https://ckunakom.github.io/smule-data-visual",
-        src: "img/data-visual.png",
-        alt: "data-visual",
-        description: "Analysis and visualization created from Tableau, using a more elaborated data extracted from the Smule app. A '2.0' version of the <a href='https://ckunakom.github.io/my_smule_record/' target='_blank'>Data Mining: Smule App Data</a> project.",
-        side: "right"
-    },
-    {
-        title: "Clinical Data Management: eCRF & Edit Checks",
-        url: "https://ckunakom.github.io/CRF_edit_checks/",
-        src: "img/ec_crf1.PNG",
-        alt: "crf_ec",
-        description: "Programmed edit checks on eCRF using javaScript to eliminate manual data review and data cleaning.",
-        side: "left"
-    },
-    {
-        title: "Data Mining: Smule App Data",
-        url: "https://ckunakom.github.io/my_smule_record/",
-        src: "img/data-mining.png",
-        alt: "data-mining",
-        description: "My very first project after graduating from the bootcamp back in 2020. Mining raw data from Smule app in JSON format with API-like request and turn it to csv file using Python.",
-        side: "right"
-    },
-]
+  {
+    title: "DIY: Spotify Wrapped",
+    url: "https://ckunakom.github.io/diy-spotify-wrapped/",
+    src: "img/spotify.PNG",
+    alt: "spotify",
+    description:
+      "Recreating Spotify End of Year Wrapped Dashboard with data extractaction from Spotify Web API using python, transformation using pandas module and loading it into BI tool for dashboard and storyboard (Tableau).",
+    side: "left",
+  },
+  {
+    title: "Data Visualization: Smule App Data",
+    url: "https://ckunakom.github.io/smule-data-visual",
+    src: "img/data-visual.png",
+    alt: "data-visual",
+    description:
+      "Analysis and visualization created from Tableau, using a more elaborated data extracted from Smule app.",
+    side: "right",
+  },
+  {
+    title: "Clinical Data Management: eCRF & Edit Checks",
+    url: "https://ckunakom.github.io/CRF_edit_checks/",
+    src: "img/ec_crf1.PNG",
+    alt: "crf_ec",
+    description:
+      "Programmed edit checks on eCRF using javaScript to eliminate manual data review and data cleaning.",
+    side: "left",
+  },
+  {
+    title: "Data Mining: Smule App Data",
+    url: "https://ckunakom.github.io/my_smule_record/",
+    src: "img/data-mining.png",
+    alt: "data-mining",
+    description:
+      "My very first project after graduating from the bootcamp back in 2020. Mining raw data from Smule app in JSON format with API-like request and turn it into csv file using Python.",
+    side: "right",
+  },
+];
 
-var analystDom = "";
+var mainProjectDom = "";
 
-for (var i = 0 ; i < analystContent.length; i++) {
-    const {title, url, src, alt, description, side} = analystContent[i];
+for (var i = 0; i < analystContent.length; i++) {
+  const { title, url, src, alt, description, side } = analystContent[i];
 
-    if (side == 'left') {
-        analystDom += `
+  if (side == "left") {
+    mainProjectDom += `
             <div class="row pb-3 project-cards">
                 <div class='col-sm-6 col-xs-12'>
                     <a class="project-card" href="${url}" target="_blank">
                     <div class="card" id="imgbox-focus">
-                    <img class="card-img-top" src="${src}" alt="${alt}">
+                        <img class="card-img-top" src="${src}" alt="${alt}">
                     <div class="card-body">
                         <h4 class="card-title text-primary">${title}</h4>
                         <p class="card-text" id="describe">${description}</p>
@@ -54,10 +58,8 @@ for (var i = 0 ; i < analystContent.length; i++) {
                     </a>
                 </div>
         `;
-    }
-
-    else {
-        analystDom += `
+  } else {
+    mainProjectDom += `
             <div class='col-sm-6 col-xs-12'>
                 <a class="project-card" href="${url}" target="_blank">
                 <div class="card" id="imgbox-focus">
@@ -71,7 +73,7 @@ for (var i = 0 ; i < analystContent.length; i++) {
             </div>
         </div>
     `;
-    }
+  }
 }
 
-document.getElementById('analyst-dom').innerHTML = analystDom;
+document.getElementById("main-project-dom").innerHTML = mainProjectDom;

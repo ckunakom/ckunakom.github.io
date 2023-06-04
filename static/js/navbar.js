@@ -19,7 +19,7 @@ var navBarDom = `
       <a class="nav-link" href="about.html">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="project.html">Project</a>
+      <a class="nav-link" href="projects.html">Projects</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="https://ckunakom.github.io/resume/" target="_blank">Resume</a> 
